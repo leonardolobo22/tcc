@@ -42,7 +42,10 @@ function Home(){
 import React from 'react';
 import Header from './Header';
 import Hello from './Hello';
-import ListaArvores from './ListaArvores';
+import Footer from './Footer';
+import Arvores from './Arvores';
+import IpeAmarelo from './IpeAmarelo';
+import "./App.css";
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -52,16 +55,30 @@ function App(){
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ListaArvores" element={<ListaArvores />} />
+        <Route path="/Arvores" element={<Arvores />} />
         <Route path="/Hello/" element={<Hello />} />
+        <Route path="/IpeAmarelo/" element={<IpeAmarelo />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
 
 function Home(){
   return(
-    <h1>Seja Bem-Vindo!</h1>
+    <div>
+      <div className="img1-home"><img src="" alt="Imagem Informativa 1"/></div>
+      <h1 className="t1">Título 1</h1>
+      <p className="p1">
+        Texto 1 <br />
+        Texto 1 <br />
+        Texto 1 <br />
+        Texto 1 <br />
+        Texto 1 <br />
+        Texto 1 <br />
+      </p>
+      <div className="img2-home"><img src="" alt="Imagem Informativa 2"/></div>
+    </div>
   );
 }
 
