@@ -1,29 +1,175 @@
-.t1{
-  text-align: center;
-  margin-top: 30px;
-  background-color: gold;
-  
+/* ======= Reset e base ======= */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.p1{
-  text-align: center;
-  background-color: gold;
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.img1-home{
-  text-align: center;
-  margin-top: 30px;
-  background-color: aqua;
-  height: 100px;
+.main-content {
+  flex: 1;
 }
 
-.img2-home{
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======= Estilos gerais ======= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button-SaibaMais {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: Geograph, sans-serif;
+}
+
+/* ======= Header de boas-vindas ======= */
+.back-img-home {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-color: #7E8C54;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+}
+
+.img1-home {
   text-align: center;
   margin-top: 30px;
+  color: white;
+  font-size: 25px;
+  justify-content: safe;
+  padding: 20px 100px;
+}
+
+.img1-home h1 {
+  font-size: 2rem;
+  font-family: Geograph, sans-serif;
+}
+
+.img1-home h3 {
+  font-size: 1rem;
+  margin-top: 10px;
+  font-family: Geograph, sans-serif;
+}
+
+/* ======= Seções de destaque (3 imagens) ======= */
+.tres-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 10px;
+}
+
+.tres-img-1,
+.tres-img-2,
+.tres-img-3 {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
   background-color: orange;
   height: 100px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
-.body-arv{
-  text-align: center;
+/* ======= Perfil de pessoas (6 perfis) ======= */
+.seis-person-1,
+.seis-person-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
 }
+
+.perfil-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 150px;
+  max-width: 200px;
+  padding: 10px;
+}
+
+.perfil-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ======= Outros elementos ======= */
+.t1 {
+  text-align: center;
+  margin-top: 30px;
+  background-color: gold;
+}
+
+.p1 {
+  text-align: center;
+  background-color: gold;
+}
+
+/* ======= Responsividade ======= */
+@media (max-width: 768px) {
+  .img1-home {
+    padding: 20px;
+  }
+
+  .img1-home h1 {
+    font-size: 1.5rem;
+  }
+
+  .img1-home h3 {
+    font-size: 0.9rem;
+  }
+
+  .button-SaibaMais {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .tres-img,
+  .seis-person-1,
+  .seis-person-2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Aqui está o ajuste preciso */
+  .perfil-card {
+    flex: 1 1 calc(50% - 20px); /* 50% menos o espaço de margem */
+    max-width: calc(50% - 20px);
+    margin: 10px;
+  }
+
+  .perfil-card img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .perfil-card p {
+    font-size: 0.9rem;
+  }
+}
+

@@ -1,0 +1,143 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+  background-color: #ffffc5;
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+}
+
+.logo-header {
+  width: 100px;
+  height: 100px;
+}
+
+/* Navegação padrão (desktop) */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 110px;
+}
+
+.link {
+  color: rgb(39, 119, 54);
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 10px;
+  font-family: Geograph, sans-serif;
+  font-weight: 510;
+}
+
+.link-button {
+  margin-left: 20px;
+  background-color: green;
+  border-radius: 10%;
+  padding: 10px;
+}
+
+.link-button-int {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Geograph, sans-serif;
+}
+
+/* Botão hambúrguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(47, 142, 53);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    align-self: right;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffc5;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .link-button {
+    margin-left: 0;
+    margin-top: 10px;
+    width: calc(100% - 40px);
+    align-self: left;
+  }
+
+  .header{
+    justify-content: space-between;
+  }
+
+  .header-title{
+    position: absolute;
+  left: 53%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  font-weight: 700;
+  color: #2e6e3e;
+  font-size: 14px;
+  line-height: 1.1;
+  }
+
+}
+
+/* ============ NOME DO PARQUE (centralizado ou ao lado do logo) ============ */
+
+.header-title {
+  font-family: 'Arial Rounded MT Bold', 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2e6e3e; /* Verde escuro agradável */
+  line-height: 1.1;
+  margin-top: 25px;
+}
+
+.logo-title-container{
+  display: flex;
+}
+
+/* No desktop, alinhado à esquerda do menu */
+@media (min-width: 768px) {
+  .header-title {
+    align-items: flex-start;
+    text-align: left;
+    font-size: 18px;
+  }
+}

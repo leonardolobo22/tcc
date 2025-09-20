@@ -1,0 +1,26 @@
+.body-arv {
+  text-align: center;
+}
+
+.nomeArv{
+    margin: 30px 0 30px;
+}
+
+.img-arv{
+    margin: 40px 0 30px;
+}
+
+.bioma{
+    margin: 30px 0 30px;
+    font-weight: normal;
+}
+
+.cientifico{
+    font-style: italic;
+    font-family: 'Times New Roman', serif;
+    font-weight: normal;
+}
+
+.desc-arv{
+    font-weight: normal;
+}
