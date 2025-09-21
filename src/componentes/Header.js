@@ -24,10 +24,10 @@ function Header() {
 
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
           <Link to="/" className="link" onClick={closeMenu}>Início</Link>
-          <Link to="/Hello" className="link" onClick={closeMenu}>Sobre o Parque</Link>
-          <Link to="/Arvores" className="link" onClick={closeMenu}>Trilhas</Link>
+          <Link to="/admin" className="link" onClick={closeMenu}>Sobre o Parque</Link>
+          <Link to="/ListaArvores" className="link" onClick={closeMenu}>Trilhas</Link>
           <Link to="/" className="link" onClick={closeMenu}>Educação Ambiental</Link>
-          <Link to="/Arvores" className="link" onClick={closeMenu}>Galeria</Link>
+          <Link to="/ListaArvores" className="link" onClick={closeMenu}>Galeria</Link>
           <Link to="/Hello" className="link" onClick={closeMenu}>Contato</Link>
           <button className="link-button" onClick={closeMenu}>
             <Link to="/Hello" className="link-button-int">Visite o Parque</Link>

@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from "react"; // importa useState e useEffect
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { auth } from "./firebaseConfig"; // importa o auth do Firebase
 import Header from './componentes/Header';
-import Hello from './Hello';
 import Footer from './componentes/Footer';
-import Arvores from './Arvores';
 import IpeAmarelo from './pages/IpeAmarelo';
+import Admin from './pages/admin';
+import LoginForm from './pages/LoginForm';
 import "./App.css";
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ArvorePage from "./componentes/arvore";
+import ListaArvores from "./ListaArvores";
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Arvores" element={<Arvores />} />
-        <Route path="/Hello/" element={<Hello />} />
+        <Route path="/ListaArvores" element={<ListaArvores/>} />
         <Route path="/IpeAmarelo/" element={<IpeAmarelo />} />
+        <Route path="/arvore/:id" element={<ArvorePage />} />
+        <Route path="/LoginForm" element={<LoginForm />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       <Footer />
     </Router>

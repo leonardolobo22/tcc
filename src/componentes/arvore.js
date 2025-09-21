@@ -1,16 +1,47 @@
-import React from 'react';
-import './arvore.css';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebaseConfig";
+import "./arvore.css";
 
-function Arvore({nome, imagem, bioma, nomeC, descricao}){
-    return (
-        <div className="body-arv">
-            <h1 className="nomeArv">{nome}</h1>
-            <img src = {imagem} alt={nome} className="img-arv" />
-            <h2 className="nomeC">Nome Científico: <span className="cientifico"><em>{nomeC}</em></span></h2>
-            <h2 className="bioma">Bioma: {bioma}</h2>
-            <h2 className="desc-arv">Curiosidade: {descricao}</h2> 
-        </div>
-    );
+function ArvorePage() {
+  const { id } = useParams();
+  const [arvore, setArvore] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchArvore = async () => {
+      try {
+        const ref = doc(db, "arvores", id);
+        const snap = await getDoc(ref);
+        if (snap.exists()) {
+          setArvore(snap.data());
+        }
+      } catch (err) {
+        console.error("Erro ao carregar árvore:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchArvore();
+  }, [id]);
+
+  if (loading) return <p className="mensagem">🌱 Carregando árvore...</p>;
+  if (!arvore) return <p className="mensagem">❌ Árvore não encontrada.</p>;
+
+  return (
+    <div className="arvore-container">
+      <h1 className="arvore-nome">{arvore.nome}</h1>
+      {arvore.imagem && (
+        <img src={arvore.imagem} alt={arvore.nome} className="arvore-imagem" />
+      )}
+      <div className="arvore-info">
+        <h2>Nome Científico: <em>{arvore.nomeCientifico}</em></h2>
+        <h2>Bioma: {arvore.bioma}</h2>
+        <p>{arvore.descricao}</p>
+      </div>
+    </div>
+  );
 }
 
-export default Arvore;
+export default ArvorePage;
