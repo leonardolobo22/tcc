@@ -65,8 +65,9 @@ img {
 }
 
 .img1-home h3 {
-  font-size: 1rem;
   margin-top: 10px;
+  font-size: 20px;
+  font-weight: 510;
   font-family: Geograph, sans-serif;
 }
 

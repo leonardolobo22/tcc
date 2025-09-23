@@ -10,8 +10,7 @@ function Footer(){
                 <Link to="/ListaArvores" className="link2">Lista Arvores</Link>
                 <Link to="/Hello" className="link2">Hello</Link>
                 <Link to="/" className="link2">Início</Link>
-                <Link to="/ListaArvores" className="link2">Lista Arvores</Link>
-                <Link to="/Hello" className="link2">hello</Link>
+                <Link to="/admin" className="link2" >Administrador</Link>
             </nav>
             <p className="link2">Total de Visitas: &nbsp;</p>
             <div id="sfcac28k3nap5e9u6yyqx3xkgn34sn5gk5u">
