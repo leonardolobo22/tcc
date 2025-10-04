@@ -23,7 +23,7 @@ const TreeForm = ({
             required
           />
           <input 
-            name="nomeCientifico" 
+            name="nomeCientifico"
             placeholder="Nome Científico" 
             value={form.nomeCientifico} 
             onChange={handleChange}
@@ -45,6 +45,7 @@ const TreeForm = ({
             value={form.descricao} 
             onChange={handleChange}
             className="form-input"
+            required
           />
         </div>
         
@@ -54,6 +55,7 @@ const TreeForm = ({
           value={form.imagem} 
           onChange={handleChange}
           className="form-input-full"
+          required
         />
 
         <div className="form-actions">

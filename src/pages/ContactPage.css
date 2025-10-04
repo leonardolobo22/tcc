@@ -1,0 +1,82 @@
+.contact-page {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a8ff78, #78ffd6); /* identidade visual do site */
+  padding: 60px 20px;
+  min-height: calc(100vh - 140px); /* ajusta entre header e footer */
+  color: #2e6e3e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.contact-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.contact-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #14532d; /* verde mais escuro para títulos */
+}
+
+.team-section, .institution-section {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 40px;
+  background: rgba(255,255,255,0.85);
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.team-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.team-list li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.team-list a {
+  color: #0f5132;
+  text-decoration: none;
+}
+
+.team-list a:hover {
+  text-decoration: underline;
+}
+
+.institution-section p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.institution-section a {
+  color: #0f5132;
+  text-decoration: none;
+}
+
+.institution-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media(max-width: 600px){
+  .contact-page h1 {
+    font-size: 2rem;
+  }
+
+  .contact-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .team-list li, .institution-section p {
+    font-size: 1rem;
+  }
+}

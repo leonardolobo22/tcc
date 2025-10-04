@@ -80,3 +80,23 @@
     padding: 15px;
   }
 }
+
+.arvores-container {
+  flex: 1; /* faz o conteúdo ocupar o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* mantém os elementos no topo */
+}
+
+.arvores-pesquisa {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 15px auto;
+  display: block;
+  border: 2px solid #2e7d32;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+

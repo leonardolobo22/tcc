@@ -2,10 +2,13 @@
   display: flex;
   justify-content: center;
   padding: 30px 20px;
-  background-color: #ffffc5;
+  background: linear-gradient(135deg, #11998e, #38ef7d, #d4fc79);
   position: relative;
   z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Poppins', 'Nunito', sans-serif;
 }
+
 
 /* Logo */
 .logo {
@@ -26,25 +29,27 @@
 }
 
 .link {
-  color: rgb(39, 119, 54);
+  color: rgb(46, 110, 0);
   text-decoration: none;
   font-size: 20px;
   font-family: Geograph, sans-serif;
   font-weight: 510;
+  font-weight: bold;
 }
 
 .link-button {
   margin-left: 20px;
-  background-color: green;
+  background-color: rgb(237, 231, 61);
   border-radius: 10%;
   padding: 10px;
 }
 
 .link-button-int {
-  color: white;
+  color: rgb(10, 100, 13);
   text-decoration: none;
   font-size: 20px;
   font-family: Geograph, sans-serif;
+  font-weight: bold;
 }
 
 /* Botão hambúrguer */
@@ -104,7 +109,7 @@
   }
 
   .header-title{
-    position: absolute;
+  position: absolute;
   left: 53%;
   transform: translateX(-50%);
   text-align: center;

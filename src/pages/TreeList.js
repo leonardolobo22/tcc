@@ -1,8 +1,11 @@
 import React from 'react';
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const TreeList = ({ arvores, onEdit, onDelete, loading }) => {
+    const navigate = useNavigate();
+
   if (loading) {
     return <div className="loading">🔄 Carregando árvores...</div>;
   }
@@ -42,9 +45,6 @@ const TreeList = ({ arvores, onEdit, onDelete, loading }) => {
               <p className="tree-scientific">
                 <em>{arv.nomeCientifico}</em>
               </p>
-              <p className="tree-details">
-                {arv.bioma} • {arv.descricao}
-              </p>
             </div>
             
             <div className="tree-actions">
@@ -62,17 +62,13 @@ const TreeList = ({ arvores, onEdit, onDelete, loading }) => {
               >
                 🗑️ Excluir
               </button>
-
-<ul>
-        {arvores.map((arv) => (
-          <li key={arv.id}>
-            <h2>{arv.nome}</h2>
-            {/* botão/link para detalhes */}
-            <Link to={`/arvore/${arv.id}`}>Ver detalhes</Link>
-          </li>
-        ))}
-      </ul>
-
+              <button 
+                onClick={() => navigate(`/arvore/${arv.id}`)} 
+                disabled={loading}
+                className="btn-details"
+              >
+                📋 Ver detalhes
+              </button>
             </div>
           </div>
         ))}

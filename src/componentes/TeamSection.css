@@ -1,0 +1,343 @@
+/* Container Principal */
+.team-section2 {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-section2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #22c55e, transparent);
+}
+
+/* Header da Seção */
+.team-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fade-slide-down 0.8s ease-out;
+}
+
+.team-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #14532d;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #166534, #22c55e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.team-subtitle {
+  font-size: 1.2rem;
+  color: #15803d;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Categoria */
+.team-category {
+  margin-bottom: 60px;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #166534;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #22c55e, #10b981);
+  border-radius: 2px;
+}
+
+/* Grid de Cards */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.advisor-grid {
+  max-width: 900px;
+}
+
+/* Card Individual */
+.team-card {
+  animation: fade-slide-up 0.6s ease-out backwards;
+}
+
+.card-inner {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px 25px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #22c55e, #10b981);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .card-inner::before {
+  transform: scaleX(1);
+}
+
+.team-card:hover .card-inner {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
+}
+
+/* Glow Effect */
+.card-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.3), transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.team-card:hover .card-glow {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 1;
+}
+
+/* Imagem */
+.card-image-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #dcfce7;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.team-card:hover .card-image {
+  border-color: #22c55e;
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.team-card:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Conteúdo do Card */
+.card-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.card-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #14532d;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.team-card:hover .card-name {
+  color: #16a34a;
+}
+
+.card-role {
+  font-size: 1rem;
+  color: #16a34a;
+  font-weight: 400;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .card-role {
+  opacity: 1;
+  color: #15803d;
+}
+
+/* Cards de Orientadores */
+.advisor-card .card-inner {
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.advisor-card .card-inner::before {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+}
+
+.advisor-card .card-image {
+  border-color: #fef3c7;
+}
+
+.advisor-card:hover .card-image {
+  border-color: #fbbf24;
+}
+
+.advisor-card:hover .card-name {
+  color: #d97706;
+}
+
+.advisor-card .card-role {
+  color: #d97706;
+}
+
+.advisor-card:hover .card-role {
+  color: #b45309;
+}
+
+/* Animações */
+@keyframes fade-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 60px 15px;
+  }
+
+  .team-title {
+    font-size: 2.2rem;
+  }
+
+  .team-subtitle {
+    font-size: 1rem;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .card-inner {
+    padding: 25px 15px 20px;
+  }
+
+  .card-image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-name {
+    font-size: 1.1rem;
+  }
+
+  .card-role {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-title {
+    font-size: 1.8rem;
+  }
+
+  .team-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+  }
+
+  .card-inner {
+    padding: 20px 12px 18px;
+  }
+
+  .card-image-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card-name {
+    font-size: 1rem;
+  }
+
+  .card-role {
+    font-size: 0.85rem;
+  }
+}
