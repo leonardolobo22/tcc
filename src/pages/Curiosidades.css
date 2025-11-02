@@ -1,0 +1,117 @@
+/* Container principal das páginas de curiosidades */
+.curiosidade-page {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #a8edea, #fed6e3); /* gradiente infantil */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* Títulos principais */
+.curiosidade-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff7f50;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Parágrafos */
+.curiosidade-page p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Lista de curiosidades (caso queira usar ul) */
+.curiosidade-page ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.curiosidade-page li {
+  margin-bottom: 10px;
+}
+
+/* Cards com imagem e texto para curiosidades */
+.curiosidade-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.6); /* fundo levemente transparente */
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curiosidade-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Imagens dentro dos cards */
+.curiosidade-item img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Seção de dicas */
+.curiosidade-dicas {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.curiosidade-dicas h2 {
+  color: #28a745;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 1px 1px #fff;
+}
+
+.curiosidade-dicas ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.curiosidade-dicas li {
+  margin-bottom: 10px;
+}
+
+/* Hover nas dicas (opcional para interatividade) */
+.curiosidade-dicas li:hover {
+  color: #006400;
+  transform: scale(1.02);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .curiosidade-page h1 { font-size: 2rem; }
+  .curiosidade-page p { font-size: 1rem; }
+  .curiosidade-item {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .curiosidade-item img {
+    width: 120px;
+    height: 120px;
+  }
+  .curiosidade-dicas h2 { font-size: 1.5rem; }
+  .curiosidade-dicas ul { font-size: 1rem; }
+}

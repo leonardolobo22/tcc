@@ -11,7 +11,7 @@ function QuizPage() {
         Clique no botão abaixo e teste seus conhecimentos!
       </p>
       <a
-        href="COLE_AQUI_O_LINK_DO_FORMS"
+        href="https://kahoot.it/challenge/001161566"
         target="_blank"
         rel="noopener noreferrer"
         className="quiz-button"

@@ -111,9 +111,7 @@ function Admin() {
 
       const colecaoRef = collection(db, "arvores");
       await addDoc(colecaoRef, dadosParaSalvar);
-      
-      setForm({ nome: "", nomeCientifico: "", bioma: "", descricao: "", imagem: "" });
-      setMessage("🎉 Árvore adicionada com sucesso!");
+
       
       await carregarArvores();
     } catch (error) {

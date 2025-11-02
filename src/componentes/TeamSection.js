@@ -3,16 +3,16 @@ import './TeamSection.css';
 
 export default function TeamSection() {
   const developers = [
-    { name: 'Ana Laura', role: 'Desenvolvedora', image: '/image.png' },
-    { name: 'Jade', role: 'Desenvolvedora', image: '/image.png' },
-    { name: 'Leonardo', role: 'Desenvolvedor', image: '/image.png' },
-    { name: 'Sabrina', role: 'Desenvolvedora', image: '/image.png' }
+    { name: 'Ana Laura', role: 'Desenvolvedora', image: '/ana.jpeg' },
+    { name: 'Jade', role: 'Desenvolvedora', image: '/jade.jpeg' },
+    { name: 'Leonardo', role: 'Desenvolvedor', image: '/leonardo.jpeg' },
+    { name: 'Sabrina', role: 'Desenvolvedora', image: '/sabrina.jpeg' }
   ];
 
   const advisors = [
-    { name: 'Ademir', role: 'Orientador', image: '/image.png' },
-    { name: 'Danilo', role: 'Orientador', image: '/image.png' },
-    { name: 'Silvia', role: 'Orientadora', image: '/image.png' }
+    { name: 'Ademir', role: 'Orientador', image: '/ademir.jpeg' },
+    { name: 'Danilo', role: 'Orientador', image: '/danilo.jpeg' },
+    { name: 'Silvia', role: 'Orientadora', image: '/silvia.jpeg' }
   ];
 
   return (

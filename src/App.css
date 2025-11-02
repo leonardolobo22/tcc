@@ -49,6 +49,7 @@ img {
   font-size: 1rem;
   cursor: pointer;
   font-family: Geograph, sans-serif;
+  text-decoration: none;
 }
 
 /* ======= Header de boas-vindas ======= */
@@ -139,5 +140,99 @@ img {
   }
 
   
+}
+
+
+
+
+
+.curiosidades-container {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #e0f7e9, #d1fe57);
+  border-top: 4px solid #2e7d32;
+}
+
+.curiosidades-titulo {
+  font-size: 2rem;
+  color: #1b5e20;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.curiosidades-subtitulo {
+  color: #33691e;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.curiosidades-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.curiosidade-card {
+  position: relative;
+  width: 300px;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curiosidade-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.curiosidade-card:hover img {
+  transform: scale(1.1);
+}
+
+.curiosidade-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  transition: opacity 0.4s ease;
+}
+
+.curiosidade-card:hover .curiosidade-overlay {
+  opacity: 1;
+}
+
+.curiosidade-overlay h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.curiosidade-overlay p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.curiosidade-btn {
+  background-color: #81c784;
+  color: #1b5e20;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.curiosidade-btn:hover {
+  background-color: #66bb6a;
 }
 
