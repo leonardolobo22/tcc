@@ -13,19 +13,24 @@ function ContactPage() {
             <strong>Ana Laura Raffa</strong> – <a href="mailto:ana.raffa@fatec.sp.gov.br">ana.raffa@fatec.sp.gov.br</a>
           </li>
           <li>
-            <strong>Sabrina Tomaz Barbosa</strong> – <a href="mailto:sabrina.barbosa2@fatec.sp.gov.br">sabrina.barbosa2@fatec.sp.gov.br</a>
+            <strong>Jade Rocha</strong> – <a href="mailto:jade.rocha01@fatec.sp.gov.br">jade.rocha01@fatec.sp.gov.br</a>
           </li>
           <li>
-            <strong>Leonardo Correa Lobo</strong> – <a href="mailto:lobo@fatec.sp.gov.br">lobo@fatec.sp.gov.br</a>
+            <strong>Sabrina Tomaz Barbosa</strong> – <a href="mailto:sabrina.barbosa@fatec.sp.gov.br">sabrina.barbosa@fatec.sp.gov.br</a>
           </li>
           <li>
-            <strong>Ademir</strong> – <a href="mailto:ademir@fatec.sp.gov.br">ademir@fatec.sp.gov.br</a>
+            <strong>Leonardo Correa Lobo</strong> – <a href="mailto:leonardo.lobo@fatec.sp.gov.br">leonardo.lobo@fatec.sp.gov.br</a>
+          </li>
+
+          <h2><br></br>Orientadores</h2>
+          <li>
+            <strong>Ademir Diniz Neves</strong> – <a href="mailto:ademir.neves@fatec.sp.gov.br">ademir.neves@fatec.sp.gov.br</a>
           </li>
           <li>
-            <strong>Danilo</strong> – <a href="mailto:danilo@fatec.sp.gov.br">danilo@fatec.sp.gov.br</a>
+            <strong>Danilo Gustavo Albano Valim</strong> – <a href="mailto:danilo.valim@fatec.sp.gov.br">danilo.valim@fatec.sp.gov.br</a>
           </li>
           <li>
-            <strong>Silvia</strong> – <a href="mailto:silvia@fatec.sp.gov.br">silvia@fatec.sp.gov.br</a>
+            <strong>Silvia Roberta de Jesus Garcia</strong> – <a href="mailto:silvia.garcia01@fatec.sp.gov.br">silvia.garcia01@fatec.sp.gov.br</a>
           </li>
         </ul>
       </section>
