@@ -1,4 +1,16 @@
 /* ======= Reset e base ======= */
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('/src/fonts/Baloo2-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('/src/fonts/Baloo2-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -141,10 +153,6 @@ img {
 
   
 }
-
-
-
-
 
 .curiosidades-container {
   text-align: center;

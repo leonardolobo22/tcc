@@ -1,5 +1,17 @@
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('/src/fonts/Baloo2-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('/src/fonts/Baloo2-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
 .quiz-page {
-  font-family: 'Baloo 2', cursive;
+  font-family: 'Baloo 2', 'Comic Sans MS', cursive;
   background: linear-gradient(135deg, #a8ff78, #78ffd6);
   display: flex;
   flex-direction: column;

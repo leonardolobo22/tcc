@@ -1,4 +1,16 @@
 /* Container principal das páginas de curiosidades */
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('/src/fonts/Baloo2-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('/src/fonts/Baloo2-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
 .curiosidade-page {
   padding: 40px 20px;
   max-width: 900px;
@@ -6,7 +18,7 @@
   background: linear-gradient(to bottom, #a8edea, #fed6e3); /* gradiente infantil */
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'baloo 2', 'Comic Sans MS' cursive, sans-serif;
   color: #333;
   text-align: center;
 }
